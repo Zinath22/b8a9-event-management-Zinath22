@@ -1,9 +1,12 @@
+// import Banner from "../../Components/Header/Banner/Banner";
+
+import Banner from "../../Components/Header/Banner/Banner";
 
 
 const Home = () => {
     return (
-        <div>
-            <h2>This is home</h2>
+        <div className="px-10 mx-auto">
+       <Banner></Banner>
         </div>
     );
 };

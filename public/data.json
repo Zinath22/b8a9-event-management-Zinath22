@@ -1,0 +1,56 @@
+[
+    {
+    "id": 1,
+    "name": "Product A",
+    "banner_img": "https://i.ibb.co/X8Ytc63/banner.jpg",
+    "logo_img": "https://i.ibb.co/qBMcH2k/logo.webp",
+    "price": 19.99,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+    {
+    "id": 2,
+    "name": "Product A",
+    "banner_img": "https://i.ibb.co/X8Ytc63/banner.jpg",
+    "logo_img": "https://i.ibb.co/qBMcH2k/logo.webp",
+    "card_img": "product_a_card.jpg",
+    "price": 19.99,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+    {
+    "id": 3,
+    "name": "Product A",
+    "banner_img": "https://i.ibb.co/X8Ytc63/banner.jpg",
+    "logo_img": "https://i.ibb.co/qBMcH2k/logo.webp",
+    "card_img": "product_a_card.jpg",
+    "price": 19.99,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+    {
+    "id": 4,
+    "name": "Product A",
+    "banner_img": "https://i.ibb.co/X8Ytc63/banner.jpg",
+    "logo_img": "https://i.ibb.co/qBMcH2k/logo.webp",
+    "card_img": "product_a_card.jpg",
+    "price": 19.99,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+    {
+    "id": 5,
+    "name": "Product A",
+    "banner_img": "https://i.ibb.co/X8Ytc63/banner.jpg",
+    "logo_img": "https://i.ibb.co/qBMcH2k/logo.webp",
+    "card_img": "product_a_card.jpg",
+    "price": 19.99,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+    {
+    "id": 6,
+    "name": "Product A",
+    "banner_img": "https://i.ibb.co/X8Ytc63/banner.jpg",
+    "logo_img": "https://i.ibb.co/qBMcH2k/logo.webp",
+    "card_img": "product_a_card.jpg",
+    "price": 19.99,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  }
+]
+  
