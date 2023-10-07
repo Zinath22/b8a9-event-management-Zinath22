@@ -1,12 +1,17 @@
 import { FaGithub, FaGoogle } from 'react-icons/fa';
-import { useContext, useState } from "react";
-import { Link, useNavigate} from "react-router-dom";
+import { useContext, useRef, useState } from "react";
+import { Link} from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../../Firebase/firebase.config';
 // import { getAuth } from 'firebase/auth';
 
 const Login = () => {
+    const [loginError,  setLoginError] = useState('');
+    const [success, setSuccess] = useState('');
+    const emailRef = useRef(null);
+    const passwordRef =  useRef(null);
+
     const [user, setUser] = useState();
 
     const auth = getAuth(app)
@@ -22,7 +27,7 @@ const Login = () => {
        })
     }
     const {signIn }= useContext(AuthContext)
- const navigate = useNavigate()
+//  const navigate = useNavigate()
     const handleLogin = e =>{
         e.preventDefault();
         console.log(e.currentTarget);
@@ -36,14 +41,17 @@ const Login = () => {
         signIn(email,password)
         .then(result =>{
             console.log(result.user)
+            setSuccess('User Log in Successfully')
         })
 
         // navigate 
-        navigate(location?.state ? location.state : '/')
+        // navigate(location?.state ? location.state : '/')
 
         .catch(error=>{
             console.error(error);
+            setLoginError(error.message);
         })
+        
     
     }   
     
@@ -60,13 +68,19 @@ const Login = () => {
 <label className="label">
 <span className="label-text">Email</span>
 </label>
-<input type="email" name="email" placeholder="Email" className="input input-bordered " required />
+<input type="email" 
+ref={emailRef}
+name="email"
+ placeholder="Email" className="input input-bordered " required />
 </div>
 <div className="form-control">
 <label className="label">
 <span className="label-text">Password</span>
 </label>
-<input type="password" name="password" placeholder="password" className="input input-bordered" required />
+<input 
+type="password"
+ref={passwordRef}
+ name="password" placeholder="password" className="input input-bordered" required />
 
 </div>
 <div className="form-control mt-6">
@@ -78,6 +92,15 @@ const Login = () => {
  }
 
 </form>
+
+{
+                    loginError && <p className="text-red-700 text-center">{loginError}</p>
+                }
+
+{
+  success && <p className="text-green-400 text-3xl text-center">{success}</p>
+}
+
 <p className="text-center mt-4">Do not have an account <Link className="text-blue-700 font-bold" to="/register">Register</Link> </p>
 </div>
 <div className="py-7 w-3/2 mr-5 ">

@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 // import swal from "sweetalert";
 // import {  toast } from 'react-toastify';
 // import swal from 'sweetalert';
@@ -51,11 +52,11 @@ const Register = () => {
 
     return (
         <div>
- <div>
+ <div className="shadow-lg md:w-3/4 lg:w-1/2 mx-auto mt-5 py-5 mb-5 rounded-lg px-5 bg-pink-400">
 
 <h2 className="text-3xl my-7 text-center ">Please Register</h2>
 
-<form onSubmit={handleRegister} className="md:w-3/4 lg:w-1/2 mx-auto" >
+<form onSubmit={handleRegister} className="" >
 <div className="form-control">
 <label className="label">
 <span className="label-text">Name</span>
@@ -69,19 +70,30 @@ const Register = () => {
 </label>
 <input type="email" name="email" placeholder="Email" className="input input-bordered" required />
 </div>
-<div className="form-control">
+<div className="form-control  ">
 <label className="label">
 <span className="label-text">Password</span>
-<span onClick={()=> setShowPassword(!showPassword)}>Show</span>
-</label>
-<input type={showPassword ? "text" : "password"}
-name="password" 
-placeholder="password" className="input input-bordered" required />
 
+
+
+</label>
+
+<div className="w-full  mx-auto relative ">
+<input  type={showPassword ? "text" : "password"}
+name="password" 
+placeholder="password" className="input input-bordered   " required />
+
+<span className="absolute top-3 right-1" onClick={()=> setShowPassword(!showPassword)}>
+  { 
+   
+   showPassword ? <FaEyeSlash> </FaEyeSlash> : <FaEye></FaEye>
+  }
+</span>
+</div>
 
 </div>
 <div className="form-control mt-6">
-<button className="btn btn-primary">Register</button>
+<button className="btn  bg-purple-500">Register</button>
 </div>
 </form>
 
