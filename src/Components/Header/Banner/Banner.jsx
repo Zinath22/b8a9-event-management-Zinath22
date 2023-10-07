@@ -3,14 +3,15 @@
 
 const Banner = () => {
     const bgImg = {
-        backgroundImage: "url(https://i.ibb.co/X8Ytc63/banner.jpg)",
+        backgroundImage: "url(https://i.ibb.co/gVZ06sP/arjun-mj-UEei-Ze-KFlks-unsplash.jpg)",
         backgroundSize: "contain",
         backgroundPosition: "center",
       };
     return (
         <div className="py-10">
              <div style={bgImg}  className="h-[450px] relative flex flex-col justify-center items-center">
-        <div className="absolute inset-0 bg-opacity-40 bg-gray-100 z-10">
+              <h2 className="text-6xl text-blue-700">Welcome</h2>
+        <div className="absolute inset-0 bg-opacity-70  z-10">
          
         </div>
        

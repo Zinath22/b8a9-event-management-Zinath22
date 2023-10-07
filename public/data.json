@@ -4,6 +4,7 @@
     "name": "Product A",
     "banner_img": "https://i.ibb.co/X8Ytc63/banner.jpg",
     "logo_img": "https://i.ibb.co/qBMcH2k/logo.webp",
+    "card_img": "https://i.ibb.co/JxdwhrW/alekon-pictures-yj4kw-A4h-Ms-unsplash.jpg",
     "price": 19.99,
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   },
@@ -12,7 +13,7 @@
     "name": "Product A",
     "banner_img": "https://i.ibb.co/X8Ytc63/banner.jpg",
     "logo_img": "https://i.ibb.co/qBMcH2k/logo.webp",
-    "card_img": "product_a_card.jpg",
+    "card_img": "https://i.ibb.co/31K7Cbm/austin-distel-w-D1-LRb9-Oe-Eo-unsplash.jpg",
     "price": 19.99,
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   },
@@ -21,7 +22,7 @@
     "name": "Product A",
     "banner_img": "https://i.ibb.co/X8Ytc63/banner.jpg",
     "logo_img": "https://i.ibb.co/qBMcH2k/logo.webp",
-    "card_img": "product_a_card.jpg",
+    "card_img": "https://i.ibb.co/ccD6Hry/chuttersnap-a-En-H4h-J-Mrs-unsplash-1.jpg",
     "price": 19.99,
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   },
@@ -30,7 +31,7 @@
     "name": "Product A",
     "banner_img": "https://i.ibb.co/X8Ytc63/banner.jpg",
     "logo_img": "https://i.ibb.co/qBMcH2k/logo.webp",
-    "card_img": "product_a_card.jpg",
+    "card_img": "https://i.ibb.co/cTHg2RX/colin-maynard-CEEhm-AGp-Yz-E-unsplash.jpg",
     "price": 19.99,
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   },
@@ -39,7 +40,7 @@
     "name": "Product A",
     "banner_img": "https://i.ibb.co/X8Ytc63/banner.jpg",
     "logo_img": "https://i.ibb.co/qBMcH2k/logo.webp",
-    "card_img": "product_a_card.jpg",
+    "card_img": "https://i.ibb.co/yQT93Xq/marc-babin-ec-GZWPOvya0-unsplash.jpg",
     "price": 19.99,
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   },
@@ -48,7 +49,7 @@
     "name": "Product A",
     "banner_img": "https://i.ibb.co/X8Ytc63/banner.jpg",
     "logo_img": "https://i.ibb.co/qBMcH2k/logo.webp",
-    "card_img": "product_a_card.jpg",
+    "card_img": "https://i.ibb.co/yWJyJ0w/markus-spiske-9-Qv774-YDKb-A-unsplash-1.jpg",
     "price": 19.99,
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   }
