@@ -1,56 +1,68 @@
 [
     {
     "id": 1,
-    "name": "Product A",
+    "name": "Engagement Parties",
     "banner_img": "https://i.ibb.co/X8Ytc63/banner.jpg",
     "logo_img": "https://i.ibb.co/qBMcH2k/logo.webp",
     "card_img": "https://i.ibb.co/JxdwhrW/alekon-pictures-yj4kw-A4h-Ms-unsplash.jpg",
-    "price": 19.99,
+    "team_img": "https://i.ibb.co/C7vPW19/member3.png",
+    "team_name": "Habiba Hossain",
+    "price": 20,
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   },
     {
     "id": 2,
-    "name": "Product A",
+    "name": "Retirement Parties",
     "banner_img": "https://i.ibb.co/X8Ytc63/banner.jpg",
     "logo_img": "https://i.ibb.co/qBMcH2k/logo.webp",
     "card_img": "https://i.ibb.co/31K7Cbm/austin-distel-w-D1-LRb9-Oe-Eo-unsplash.jpg",
-    "price": 19.99,
+    "team_img": "https://i.ibb.co/4TQ70Vm/member2.png",
+    "team_name": "Habiba Hossain",
+    "price": 10,
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   },
     {
     "id": 3,
-    "name": "Product A",
+    "name": "wedding ",
     "banner_img": "https://i.ibb.co/X8Ytc63/banner.jpg",
     "logo_img": "https://i.ibb.co/qBMcH2k/logo.webp",
     "card_img": "https://i.ibb.co/ccD6Hry/chuttersnap-a-En-H4h-J-Mrs-unsplash-1.jpg",
-    "price": 19.99,
+    "team_img": "https://i.ibb.co/19d2XGf/member1.png",
+    "team_name": "Ahsan Hossain",
+    "price": 30,
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   },
     {
     "id": 4,
-    "name": "Product A",
+    "name": "Birthday Parties",
     "banner_img": "https://i.ibb.co/X8Ytc63/banner.jpg",
     "logo_img": "https://i.ibb.co/qBMcH2k/logo.webp",
     "card_img": "https://i.ibb.co/cTHg2RX/colin-maynard-CEEhm-AGp-Yz-E-unsplash.jpg",
-    "price": 19.99,
+    "team_img": "https://i.ibb.co/C7vPW19/member3.png",
+    "team_name": "Ahsan Hossain",
+    "price": 20,
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   },
     {
     "id": 5,
-    "name": "Product A",
+    "name": "Baby Shower",
     "banner_img": "https://i.ibb.co/X8Ytc63/banner.jpg",
     "logo_img": "https://i.ibb.co/qBMcH2k/logo.webp",
     "card_img": "https://i.ibb.co/yQT93Xq/marc-babin-ec-GZWPOvya0-unsplash.jpg",
-    "price": 19.99,
+    "team_img": "https://i.ibb.co/C7vPW19/member3.png",
+    "team_name": "Adil Hossain",
+    "price": 10,
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   },
     {
     "id": 6,
-    "name": "Product A",
+    "name": "Anniversaries Party",
     "banner_img": "https://i.ibb.co/X8Ytc63/banner.jpg",
     "logo_img": "https://i.ibb.co/qBMcH2k/logo.webp",
     "card_img": "https://i.ibb.co/yWJyJ0w/markus-spiske-9-Qv774-YDKb-A-unsplash-1.jpg",
-    "price": 19.99,
+    "team_img": "https://i.ibb.co/C7vPW19/member3.png",
+    "team_name": "Adil Hossain",
+    "price": 15,
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   }
 ]

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 
 const ServicesCard = ({service}) => {
-   const {id,card_img,name,price,description} = service;
+   const {id,card_img,name} = service;
     return (
         <div>
 <div className="relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
@@ -18,13 +18,9 @@ const ServicesCard = ({service}) => {
       <p className="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
        {name}
       </p>
-      <p className="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
-       {price}
-      </p>
+      
     </div>
-    <p className="block font-sans text-sm font-normal leading-normal text-gray-700 antialiased opacity-75">
-     {description}
-    </p>
+    
   </div>
   <div className="p-6 pt-0">
     <Link to={`/services/${id}`}><button
