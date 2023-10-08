@@ -5,8 +5,9 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import ServiceDetails from "../Components/Services/ServiceDetails";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
-import Service from "../Pages/Service/Service";
+// import Service from "../Pages/Contact/Contact";
 import PrivateRoute from "./PrivateRoute";
+import Contact from "../Pages/Contact/Contact";
 // import Services from "../Components/Services/Services";
 
 
@@ -27,8 +28,8 @@ const Routes = createBrowserRouter([
                 loader: ()=> fetch('/data.json')
             },
             {
-             path: '/service',
-             element: <PrivateRoute><Service></Service></PrivateRoute>
+             path: '/contact',
+             element: <PrivateRoute><Contact></Contact></PrivateRoute>
             },
             
             {

@@ -1,6 +1,6 @@
 import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { useContext, useRef, useState } from "react";
-import { Link, useLocation, useNavigate} from "react-router-dom";
+import { Link, useLocation} from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../../Firebase/firebase.config';
@@ -33,7 +33,7 @@ const Login = () => {
     const location = useLocation();
     console.log(location);
 //  navigate 
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
     const handleLogin = e =>{
         e.preventDefault();
@@ -52,7 +52,7 @@ const Login = () => {
         })
 
         // navigate 
-        navigate(location?.state ? location.state : '/')
+        // navigate(location?.state ? location.state : '/')
 
         .catch(error=>{
             console.error(error);

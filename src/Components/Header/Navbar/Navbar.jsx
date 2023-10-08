@@ -16,7 +16,7 @@ logOut()
     const navLinks = <>
     <li><NavLink to="/">Home</NavLink></li>
     <li><NavLink to="/about">About</NavLink></li>
-    <li><NavLink to="/service">Service</NavLink></li>
+    <li><NavLink to="/contact">Contact</NavLink></li>
    
     <li><NavLink to="/register">Registration</NavLink></li>
     {/* <li><NavLink to="/login">Login</NavLink></li> */}
@@ -26,10 +26,10 @@ logOut()
    </>
 
     return (
-        <div className="flex justify-between items-center py-10 mx-10 px-10 shadow-xl">
+        <div className="flex justify-between items-center py-10 mx-10 px-10 ">
             <Logo></Logo>
         <div className=" ">
-            <div className="navbar   bg-base-100">
+            <div className="navbar  ">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
