@@ -1,8 +1,8 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 
 const TeamMenber = () => {
-    const [team_img, description] = useState([])
+    // const [team_img, description] = useState([])
     return (
         <div>
              <div className=" shadow-lg   text-center flex flex-col">
@@ -10,10 +10,11 @@ const TeamMenber = () => {
           <h3 className="mb-5 text-4xl font-bold text-black">Meet The Team Section</h3>
           <p className=" font-sm text-black">{description}</p></div>
          
-          <div className="grid mt-5 grid-cols-1 gap-20 md:grid-cols-2 lg:grid-cols-4 max-w-4xl">
+          <div className="grid mt-5 grid-cols-1 gap-20 md:grid-cols-2 lg:grid-cols-3 max-w-4xl">
            
           <div>
-            <img src={team_img} alt="" />
+            <img src={service.team_img} alt="" />
+            {/* <p>{service.team_img}</p> */}
           </div>
           
           

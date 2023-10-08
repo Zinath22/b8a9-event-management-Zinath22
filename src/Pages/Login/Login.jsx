@@ -1,12 +1,13 @@
 import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { useContext, useRef, useState } from "react";
-import { Link} from "react-router-dom";
+import { Link, useLocation, useNavigate} from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../../Firebase/firebase.config';
 // import { getAuth } from 'firebase/auth';
 
 const Login = () => {
+    
     const [loginError,  setLoginError] = useState('');
     const [success, setSuccess] = useState('');
     const emailRef = useRef(null);
@@ -16,6 +17,7 @@ const Login = () => {
 
     const auth = getAuth(app)
     const provider = new GoogleAuthProvider();
+
     const handleGoogleSignIn = ()=>{
        signInWithPopup(auth, provider)
        .then(result =>{
@@ -27,7 +29,12 @@ const Login = () => {
        })
     }
     const {signIn }= useContext(AuthContext)
-//  const navigate = useNavigate()
+    // location 
+    const location = useLocation();
+    console.log(location);
+//  navigate 
+    const navigate = useNavigate()
+
     const handleLogin = e =>{
         e.preventDefault();
         console.log(e.currentTarget);
@@ -45,7 +52,7 @@ const Login = () => {
         })
 
         // navigate 
-        // navigate(location?.state ? location.state : '/')
+        navigate(location?.state ? location.state : '/')
 
         .catch(error=>{
             console.error(error);
