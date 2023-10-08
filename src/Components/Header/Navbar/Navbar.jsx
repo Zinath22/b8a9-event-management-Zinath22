@@ -13,10 +13,12 @@ logOut()
 .catch()
 }
 
-    const navLinks = <>
+    const navLinks = 
+    <>
     <li><NavLink to="/">Home</NavLink></li>
     <li><NavLink to="/about">About</NavLink></li>
     <li><NavLink to="/contact">Contact</NavLink></li>
+    <li><NavLink to="/cart">Cart</NavLink></li>
    
     <li><NavLink to="/register">Registration</NavLink></li>
     {/* <li><NavLink to="/login">Login</NavLink></li> */}

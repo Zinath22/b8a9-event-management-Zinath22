@@ -8,6 +8,7 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 // import Service from "../Pages/Contact/Contact";
 import PrivateRoute from "./PrivateRoute";
 import Contact from "../Pages/Contact/Contact";
+import Cart from "../Pages/Cart/Cart";
 // import Services from "../Components/Services/Services";
 
 
@@ -26,6 +27,11 @@ const Routes = createBrowserRouter([
                 path: '/services/:id',
                 element: <PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
                 loader: ()=> fetch('/data.json')
+            },
+            {
+                path: '/cart',
+                element: <PrivateRoute><Cart></Cart></PrivateRoute>,
+                loader: () => fetch('/data.json')
             },
             {
              path: '/contact',

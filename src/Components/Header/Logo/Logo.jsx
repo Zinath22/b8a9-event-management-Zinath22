@@ -6,7 +6,7 @@ const Logo = () => {
 
     return (
         <div>
-           <h1>Event</h1>
+          <img src="https://i.ibb.co/qBMcH2k/logo.webp" alt="" />
           
         </div>
     );

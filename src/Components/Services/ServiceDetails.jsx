@@ -1,7 +1,8 @@
-// import { Link, useLoaderData, useParams } from "react-router-dom";
+
 
 import { Link, useLoaderData, useParams } from "react-router-dom";
-
+import { getstoredBooking, saveBooking } from "../../Utility/LocalStorage";
+import Swal from 'sweetalert';
 // import { useNavigate } from "react-router-dom";
 
 
@@ -12,14 +13,32 @@ import { Link, useLoaderData, useParams } from "react-router-dom";
 const ServiceDetails = () => {
     
   // const navigate = useNavigate()
+  const services = useLoaderData();
+  const { id } = useParams();
+  const service = services.find(service => service.id === parseInt(id));
 
-  // navigate(location?.state ? location.state : '/service')
+  const handleBooking = () => {
+      const storedBookings = getstoredBooking();
+      const exists = storedBookings.find(serviceId => serviceId === parseInt(id));
+      
+      if (exists) {
+          // Card has been added before
+          Swal.fire(
+              'Opps!',
+              'Card has been added before!',
+              'error'
+          );
+      } else {
+          // Card has not been added before, add it to local storage
+          saveBooking(parseInt(id));
+          Swal.fire(
+              'Good job!',
+              'Card  added successfully!'
+              
+          );
+      }
+  }
     
-    const services = useLoaderData();
-    const {id} = useParams();
-     
-    const service = services.find(service => service.id === parseInt(id));
-    console.log(service);
     return (
         <div className="flex py-5 justify-center items-center text-center">
             
@@ -46,8 +65,9 @@ const ServiceDetails = () => {
     </p>
   </div>
   <div className="p-6 pt-0">
-    <Link to="/service">
+    <Link to={`/services/${id}`}>
    <button
+onClick={handleBooking}
       className="btn btn-secondary w-full "
      
     >
