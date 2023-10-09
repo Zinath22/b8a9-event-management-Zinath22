@@ -7,15 +7,15 @@ const Contact = () => {
     // navigate(location?.state ? location.state : '/')
     return (
         <div className="px-10 my-10  ">
-            <div className=" rounded-lg   bg-green-400">
+            <div className=" rounded-lg   bg-pink-300">
   <div className=" text-center">
    <div className="flex justify-between mx-auto  text-center items-center">
 
    <div className=" mx-auto ">
       <h1 className="text-3xl  mb-5">Contact Us</h1>
-      <h1 className="text-2xl mb-4">phone: <span className="text-pink-500">+0999911</span></h1>
+      <h1 className="text-2xl mb-4">phone: <span className="text-purple-700">+0999911</span></h1>
      
-      <h1 className="text-2xl">Email: <span className="text-pink-500">event@event.com</span></h1>
+      <h1 className="text-2xl">Email: <span className="text-purple-700">event@event.com</span></h1>
    </div>
     
    <div className="px-5 mx-auto">

@@ -55,7 +55,14 @@ logOut()
         </div>
         {
               user ?
-              <button onClick={handleSignout} className="btn">Sign Out</button>
+              <div className="dropdown">
+  <label tabIndex={0} className="btn m-1">{user.email}</label>
+  <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+    <li><a>{user.photoURL? <img src={user.photoURL} alt="" /> : user.displayName
+ }</a></li>
+    <li onClick={handleSignout}><a>SignOut</a></li>
+  </ul>
+</div>
               :
               <Link to="/login">
             <button className="btn">Login</button>

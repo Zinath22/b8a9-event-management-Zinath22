@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import swal from "sweetalert";
 // import swal from "sweetalert";
 // import {  toast } from 'react-toastify';
 // import swal from 'sweetalert';
@@ -14,41 +15,183 @@ const Register = () => {
   
     const {createUser}  = useContext(AuthContext)
 
-    const handleRegister = e =>{
-        e.preventDefault();
-        console.log(e.currentTarget);
+    // const handleRegister = e =>{
+    //     e.preventDefault();
+    //     console.log(e.currentTarget);
 
-        const form = new FormData(e.currentTarget);
-        const name = form.get('name');
-        const email = form.get('email');
-        const password = form.get('password');
-        console.log(name,email,password);
+    //     const form = new FormData(e.currentTarget);
+    //     const name = form.get('name');
+    //     const email = form.get('email');
+    //     const password = form.get('password');
+    //     console.log(name,email,password);
 
-        if (password.length < 6) {
-          setRegisterError('Password should be at least 6 characters or longer');
-          return;
-      }
-      else if(!/[A-Z](?=.*[!@#$%^&*])/.test(password)) {
-          setRegisterError('Your password should have at least one upper case and special characters.')
-          return;
-      }
+    //     if (password.length < 6) {
+    //       swal('Password should be at least 6 characters or longer');
+    //       return;
+    //   }
 
-    // reset 
-    setRegisterError('');
-    setSuccess('');
+      
 
-        // user create 
-      createUser(email, password)
-      .then(result =>{
-        console.log(result);
-       setSuccess('Registration successfully')
+    // //  if(!/[A-Z]/.test(password)){
+    // //     swal('password should have at least one upper case')
+    // //   }
 
+    //   if(!/[A-Z].[!@#$%^&*]/.test(password)) {
+    //     swal('Your password should have at least one special characters')
+    //     return;
+    // }
+     
+
+    // // reset 
+    // setRegisterError('');
+    // setSuccess('');
+
+    //     // user create 
+    //   createUser(email, password)
+    //   .then(result =>{
+    //     console.log(result);
+    //    swal('Registration successfully')
+
+    //   })
+    //   .catch(error=>{
+    //     console.error(error)
+    //     // setRegisterError(error.message)
+    // })
+    // }
+//     const handleRegister = e => {
+//       e.preventDefault();
+//       console.log(e.currentTarget);
+  
+//       const form = new FormData(e.currentTarget);
+//       const name = form.get('name');
+//       const email = form.get('email');
+//       const password = form.get('password');
+//       console.log(name, email, password);
+  
+//       if (password.length < 6 || !/[A-Z]/.test(password) || !/[!@#$%^&*]/.test(password)) {
+//           swal('Password should be at least 6 characters long, contain at least one uppercase letter, and one special character');
+//           return;
+//       }
+  
+//       // reset
+//       setRegisterError('');
+//       setSuccess('');
+  
+//       // user create
+//       createUser(email, password)
+//           .then(result => {
+//               console.log(result);
+//               swal('Registration successful');
+//               setSuccess('Registration successful'); // Update state
+//           })
+//           .catch(error => {
+//               console.error(error);
+//               setRegisterError(error.message); // Update state
+//           });
+//   }
+//   const handleRegister = e => {
+//     e.preventDefault();
+//     console.log(e.currentTarget);
+
+//     const form = new FormData(e.currentTarget);
+//     const name = form.get('name');
+//     const email = form.get('email');
+//     const password = form.get('password');
+//     console.log(name, email, password);
+
+//     // let errorMessage = '';
+
+//     if (password.length < 6) {
+//       return  'Password should be at least 6 characters long. ';
+//     }
+
+//     if (!/[A-Z]/.test(password)) {
+//        return 'Password should contain at least one uppercase letter. ';
+//     }
+
+//     if (!/[a-z]/.test(password)) {
+//        return  'Password should contain at least one lowercase letter. ';
+//     }
+
+//     if (!/[!@#$%^&*]/.test(password)) {
+//        return  'Password should contain at least one special character. ';
+//     }
+
+//     // if (errorMessage) {
+//     //     swal(errorMessage);
+//     //     return;
+//     // }
+
+//     // reset
+//     setRegisterError('');
+//     setSuccess('');
+
+//     // user create
+//     createUser(email, password)
+//         .then(result => {
+//             console.log(result);
+//             swal('Registration successful');
+//             // setSuccess('Registration successful'); // Update state
+//         })
+//         .catch(error => {
+//             console.error(error);
+//             setRegisterError(error.message); // Update state
+//         });
+// }
+
+const validatePassword = (password) => {
+  if (password.length < 6) {
+      return 'Password must be at least 6 characters.';
+  }
+
+  if (!/[A-Z]/.test(password)) {
+      return 'Password must contain at least one uppercase letter.';
+  }
+
+  if (!/[a-z]/.test(password)) {
+      return 'Password must contain at least one lowercase letter.';
+  }
+
+  if (!/[!@#$%^&*]/.test(password)) {
+      return 'Password must contain at least one special character.';
+  }
+
+  return ''; // No validation error
+};
+
+const handleRegister = e => {
+  e.preventDefault();
+  console.log(e.currentTarget);
+
+  const form = new FormData(e.currentTarget);
+  const name = form.get('name');
+  const email = form.get('email');
+  const password = form.get('password');
+  console.log(name, email, password);
+
+  const errorMessage = validatePassword(password);
+
+  if (errorMessage) {
+      swal(errorMessage);
+      return;
+  }
+
+  // reset
+  setRegisterError('');
+  setSuccess('');
+
+  // user create
+  createUser(email, password)
+      .then(result => {
+          console.log(result);
+          swal('Registration successful');
+          setSuccess('Registration successful'); // Update state
       })
-      .catch(error=>{
-        console.error(error)
-        // setRegisterError(error.message)
-    })
-    }
+      .catch(error => {
+          console.error(error);
+          setRegisterError(error.message); // Update state
+      });
+}
 
     return (
         <div>
@@ -93,7 +236,7 @@ placeholder="password" className="input input-bordered   " required />
 
 </div>
 <div className="form-control mt-6">
-<button className="btn  bg-purple-500">Register</button>
+<button className="btn  bg-pink-500">Register</button>
 </div>
 </form>
 

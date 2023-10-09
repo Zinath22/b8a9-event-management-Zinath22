@@ -34,7 +34,7 @@ const Cart = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  ">
                     {cartBooked.length === 0 ? (
                         <p className="text-center text-purple-500
-                         text-4xl col-span-3 py-10">No Booking carts</p>
+                         text-4xl col-span-3 py-10">Empty cart</p>
                     ) :
                         cartBooked.map(cart =>( <CartCard
                         cart={cart} key={cart.id}></CartCard>))

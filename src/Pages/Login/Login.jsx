@@ -1,9 +1,10 @@
-import { FaGithub, FaGoogle } from 'react-icons/fa';
+import {  FaGoogle } from 'react-icons/fa';
 import { useContext, useRef, useState } from "react";
 import { Link, useLocation} from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../../Firebase/firebase.config';
+import swal from 'sweetalert';
 // import { getAuth } from 'firebase/auth';
 
 const Login = () => {
@@ -45,11 +46,23 @@ const Login = () => {
         const email = form.get('email');
         const password = form.get('password');
         console.log(email,password);
+
+    // reset 
+    setLoginError('');
+    setSuccess('');
+        
         signIn(email,password)
-        .then(result =>{
+       .then(result =>{
             console.log(result.user)
-            setSuccess('User Log in Successfully')
+        swal('User Log in Successfully');
         })
+        // if(!email){
+        //     swal('Please check your email')
+        //     return;
+        // }
+        // else if(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/){
+        //     swal('check')
+        // }
 
         // navigate 
         // navigate(location?.state ? location.state : '/')
@@ -60,7 +73,8 @@ const Login = () => {
         })
         
     
-    }   
+    } 
+      
     
     
     return (
@@ -76,8 +90,9 @@ const Login = () => {
 <span className="label-text">Email</span>
 </label>
 <input type="email" 
-ref={emailRef}
+
 name="email"
+ref={emailRef}
  placeholder="Email" className="input input-bordered " required />
 </div>
 <div className="form-control">
@@ -86,8 +101,10 @@ name="email"
 </label>
 <input 
 type="password"
-ref={passwordRef}
- name="password" placeholder="password" className="input input-bordered" required />
+
+ name="password"
+ ref={passwordRef}
+  placeholder="password" className="input input-bordered" required />
 
 </div>
 <div className="form-control mt-6">
@@ -108,17 +125,17 @@ ref={passwordRef}
   success && <p className="text-green-400 text-3xl text-center">{success}</p>
 }
 
-<p className="text-center mt-4">Do not have an account <Link className="text-blue-700 font-bold" to="/register">Register</Link> </p>
+<p className="text-center mt-4">New to this website Please <Link className="text-blue-700 font-bold" to="/register">Register</Link> </p>
 </div>
 <div className="py-7 w-3/2 mr-5 ">
     <h1 className='mb-5 text-center text-sky-500 font-semibold text-3xl'>...OR... <br />Login With</h1>
     <button onClick={handleGoogleSignIn} className='btn btn-outline w-full '>
     <FaGoogle></FaGoogle>Login With Google
     </button>
-    <button  onClick={handleGoogleSignIn}
+    {/* <button  onClick={handleGoogleSignIn}
     className='btn btn-outline w-full  mt-3'>
     <FaGithub></FaGithub>Login With Github
-    </button>
+    </button> */}
 </div>
  </div>
 

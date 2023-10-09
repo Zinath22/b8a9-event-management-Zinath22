@@ -4,27 +4,27 @@
 const TeamMenber = () => {
     // const [team_img, description] = useState([])
     return (
-        <div className="">
-             <div className=" shadow-lg bg-purple-300 mb-5 mx-auto rounded-lg py-5  text-center flex flex-col">
-        <div className="max-w-md ">
+        <div className="py-20">
+             <div className=" shadow-lg bg-red-400  mb-5 w-3/4 mx-auto rounded-lg py-5  text-center flex flex-col">
+
           <h3 className="mb-5 text-center  text-4xl font-bold text-black">Meet The Team Section</h3>
-          </div>
+      
          
-          <div className="grid text-center  mt-5 grid-cols-1 gap-20 md:grid-cols-2 lg:grid-cols-3 max-w-4xl">
+          <div className="grid text-center p-8 grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
            
-          <div>
-            <img src="../../../assets/images/member1.png" alt="" />
+          <div className=" space-y-3 flex justify-center items-center flex-col  text-center">
+            <img src="https://i.ibb.co/19d2XGf/member1.png" alt="" />
             <p>Pavel Das</p>
             <p>Expert for event Management and photography </p>
           </div>
-          <div>
-            <img src="../../../assets/images/member1.png" alt="" />
-            <p>Hasib Hasan</p>
+          <div className="space-y-3 flex justify-center items-center flex-col  text-center">
+            <img src="https://i.ibb.co/4TQ70Vm/member2.png" alt="" />
+            <p>Pinky Hossain</p>
             <p>Expert for event Management and photography </p>
           </div>
-          <div>
-            <img src="../../../assets/images/member1.png" alt="" />
-            <p>Pinki Hossain</p>
+          <div className="space-y-3 flex justify-center items-center flex-col  text-center">
+            <img src="https://i.ibb.co/C7vPW19/member3.png" alt="" />
+            <p>Habib Hossain</p>
             <p>Expert for event Management and photography </p>
           </div>
           

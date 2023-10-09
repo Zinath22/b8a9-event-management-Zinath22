@@ -4,8 +4,10 @@
 const Banner = () => {
     const bgImg = {
         backgroundImage: "url(https://i.ibb.co/gVZ06sP/arjun-mj-UEei-Ze-KFlks-unsplash.jpg)",
-        backgroundSize: "contain",
+        backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundRepeat : "no-repeat",
+        backgroundColor: '#FFFFFFB2',
       };
     return (
         <div className="py-10">

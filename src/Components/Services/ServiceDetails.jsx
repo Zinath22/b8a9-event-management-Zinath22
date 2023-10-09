@@ -23,7 +23,7 @@ const ServiceDetails = () => {
       
       if (exists) {
           // Card has been added before
-          Swal.fire(
+          Swal(
               'Opps!',
               'Card has been added before!',
               'error'
@@ -31,7 +31,7 @@ const ServiceDetails = () => {
       } else {
           // Card has not been added before, add it to local storage
           saveBooking(parseInt(id));
-          Swal.fire(
+          Swal(
               'Good job!',
               'Card  added successfully!'
               
@@ -43,14 +43,14 @@ const ServiceDetails = () => {
         <div className="flex py-5 justify-center items-center text-center">
             
             <div className="relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-  <div className="relative mx-4 mt-4 h-96 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
+  <div className="relative mx-4 mt-4  overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700">
     <img
       src={service.card_img}
-      className="h-full w-full object-cover"
+      className=" w-full object-cover"
     />
   </div>
-  <div className="p-6">
-    <div className="mb-2 flex items-center justify-between">
+  <div className="p-5">
+    <div className=" flex items-center justify-between">
      
        <p className="block font-sans text-base font-medium leading-relaxed text-blue-gray-900 antialiased">
        {service.name} 
