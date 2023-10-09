@@ -5,10 +5,10 @@ const Footer = () => {
         <footer className="footer footer-center p-10 bg-gray-200 ">
         <aside>
          <img className="w-[120px]" src="https://i.ibb.co/KKsbWVD/logo.webp" alt="" />
-          <p className="font-bold">
-            Event Management<br/> <span className="text-red-500 text-2xl">Providing amazing pictures, & event decoration</span>
+          <p className="font-bold" data-aos="flip-left">
+            Event Management<br/> <span className="text-red-500 text-2xl" data-aos="flip-left">Providing amazing pictures, & event decoration</span>
           </p> 
-          <p>Copyright © 2023 - All right reserved</p>
+          <p data-aos="flip-left">Copyright © 2023 - All right reserved</p>
         </aside> 
         <nav>
           <div className="grid grid-flow-col gap-4">

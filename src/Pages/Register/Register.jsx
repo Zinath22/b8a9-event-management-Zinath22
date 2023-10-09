@@ -73,7 +73,7 @@ const handleRegister = e => {
         <div>
  <div className="shadow-lg md:w-3/4 lg:w-1/2 mx-auto mt-5 py-5 mb-5 rounded-lg px-5 bg-pink-400">
 
-<h2 className="text-3xl my-7 text-center ">Please Register</h2>
+<h2 className="text-3xl my-7 text-center " data-aos="flip-left">Please Register</h2>
 
 <form onSubmit={handleRegister} className="" >
 <div className="form-control">
@@ -114,7 +114,7 @@ placeholder="password" className="input input-bordered   " required />
   success && <p className="text-green-400 text-3xl text-center">{success}</p>
 }
 
-<p className="text-center mt-4">Already have an account <Link className="text-blue-700 font-bold" to="/login">Login</Link> </p>
+<p className="text-center mt-4" data-aos="flip-left">Already have an account <Link className="text-blue-700 font-bold" to="/login">Login</Link> </p>
 
 
 

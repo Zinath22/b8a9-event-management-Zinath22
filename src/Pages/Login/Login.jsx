@@ -95,7 +95,7 @@ const Login = () => {
  <div className="flex md:flex-row flex-col my-5 rounded-lg justify-center  shadow-lg py-10 mx-auto w-2/3 ">
        <div className="w-2/3 ">
 
-<h2 className="text-3xl  text-center "> Login Now</h2>
+<h2 className="text-3xl  text-center " data-aos="flip-left"> Login Now</h2>
 
 <form onSubmit={handleLogin}  className="lg:w-1/2 md:w-3/4 mx-auto " >
 <div className="form-control">
@@ -141,10 +141,10 @@ type="password"
   success && <p className="text-green-400 text-3xl text-center">{success}</p>
 }
 
-<p className="text-center mt-4">New to this website Please <Link className="text-blue-700 font-bold" to="/register">Register</Link> </p>
+<p className="text-center mt-4" data-aos="flip-left">New to this website Please <Link className="text-blue-700 font-bold" to="/register">Register</Link> </p>
 </div>
 <div className="py-7 w-3/2 mr-5 ">
-    <h1 className='mb-5 text-center text-sky-500 font-semibold text-3xl'>...OR... <br />Login With</h1>
+    <h1 className='mb-5 text-center text-sky-500 font-semibold text-3xl' data-aos="flip-left">...OR... <br />Login With</h1>
     <button onClick={handleGoogleSignIn} className='btn btn-outline w-full '>
     <FaGoogle></FaGoogle>Login With Google
     </button>

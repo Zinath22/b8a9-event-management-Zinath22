@@ -32,7 +32,7 @@ const Cart = () => {
   }
     return (
         <div className="text-center horizontal mx-auto ml-10 mt-10 mb-10 justify-center items-center">
-           {cartBooked.length > 0 && <button  onClick={handleRemove} className="btn  bg-red-400">Delete cart</button> }
+           {cartBooked.length > 0 && <button  onClick={handleRemove} className="btn text-white bg-red-400">Delete cart</button> }
             <div>
                
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center text-center items-center  ">

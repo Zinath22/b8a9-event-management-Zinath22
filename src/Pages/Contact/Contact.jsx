@@ -10,7 +10,7 @@ const Contact = () => {
             <img className=" h-[400px] w-full rounded-lg" src="https://i.ibb.co/JkQzBnn/melinda-gimpel-5-Ne6m-MQt-Ido-unsplash.jpg" alt="" />
   
             <div className="px-5 ">
-<h1 className="text-4xl text-red-500 text-center mt-10">Our Services</h1>
+<h1 className="text-4xl text-red-500 text-center mt-10" data-aos="flip-left">Our Services</h1>
    
       <div className="flex justify-start items-center flex-col space-y-4">
       <p>Stage Decoration</p>
@@ -22,10 +22,10 @@ const Contact = () => {
    <div className="flex flex-col md:flex-row justify-evenly mx-auto  text-center items-center">
 
    <div className="  ">
-      <h1 className="text-2xltext-red-500 mb-4">phone </h1>
-      <p className="">+0999911</p>
-      <h1 className="text-2xl text-red-500">Email</h1>
-      <p className="">event@event.com</p>
+      <h1 className="text-2xltext-red-500 mb-4" data-aos="flip-left">phone </h1>
+      <p className="" data-aos="flip-left">+0999911</p>
+      <h1 className="text-2xl text-red-500" data-aos="flip-left">Email</h1>
+      <p className="" data-aos="flip-left">event@event.com</p>
    </div>
     
    <div className="flex justify-start items-center space-y-4 flex-col">

@@ -15,7 +15,7 @@ const ServicesCard = ({service}) => {
   </div>
   <div className="p-6">
     <div className="mb-2 flex items-center justify-between">
-      <p className="block font-sans text-base font-medium leading-relaxed text-red-500 antialiased">
+      <p className="block font-sans text-base font-medium leading-relaxed text-red-500 antialiased" data-aos="flip-left">
        {name}
       </p>
       

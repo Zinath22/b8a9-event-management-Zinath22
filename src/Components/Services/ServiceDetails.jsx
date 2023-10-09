@@ -70,7 +70,7 @@ const ServiceDetails = () => {
 onClick={handleBooking}
       className="btn btn-secondary w-full "
      
-    >
+      data-aos="flip-left" >
       Add to Cart
     </button>
    </Link> 

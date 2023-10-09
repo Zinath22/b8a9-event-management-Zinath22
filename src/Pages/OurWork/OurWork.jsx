@@ -4,7 +4,7 @@ const OurWork = () => {
     return (
   
       <div className="justify-center text-center">
-        <h1 className="text-4xl">Our Work</h1>
+        <h1 className="text-4xl" data-aos="flip-left">Our Work</h1>
       <div className="grid lg:grid-cols-3 md:grid-cols-1">
       <div className="card  w-[500px]  shadow-lg bg-base-100">
             <img src="https://i.ibb.co/MkP9p1Z/taylor-heery-czsw03-Ca-Bdw-unsplash.jpg" alt="" />
