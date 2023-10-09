@@ -56,13 +56,7 @@ const Login = () => {
             console.log(result.user)
         swal('User Log in Successfully');
         })
-        // if(!email){
-        //     swal('Please check your email')
-        //     return;
-        // }
-        // else if(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/){
-        //     swal('check')
-        // }
+       
 
         // navigate 
         // navigate(location?.state ? location.state : '/')
