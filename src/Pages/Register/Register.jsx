@@ -96,7 +96,7 @@ const handleRegister = e => {
 </label>
 
 
-<input  type="text"
+<input  type="password"
 name="password" 
 placeholder="password" className="input input-bordered   " required />
 
