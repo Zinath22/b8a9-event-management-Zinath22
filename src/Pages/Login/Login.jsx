@@ -148,10 +148,7 @@ type="password"
     <button onClick={handleGoogleSignIn} className='btn btn-outline w-full '>
     <FaGoogle></FaGoogle>Login With Google
     </button>
-    {/* <button  onClick={handleGoogleSignIn}
-    className='btn btn-outline w-full  mt-3'>
-    <FaGithub></FaGithub>Login With Github
-    </button> */}
+   
 </div>
  </div>
 
