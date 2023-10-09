@@ -54,7 +54,14 @@ const Login = () => {
         signIn(email,password)
        .then(result =>{
             console.log(result.user)
-        swal('User Log in Successfully');
+            if(!result.user.emailVerified){
+                swal('User Logged in  Successfully.')
+            }
+            else if(result.user){
+                return('Please verify your email address.')
+            }
+        
+        // swal('User Log in Successfully');
         })
        
 
@@ -64,14 +71,23 @@ const Login = () => {
         .catch(error=>{
             console.error(error);
             setLoginError(error.message);
-            if (error.message === 'Firebase: Error (auth/invalid-login-credentials).44') {
-                return swal('Invalid user or pass');
-            }
+            // if (error.message === 'Firebase: Error (auth/invalid-login-credentials).44') {
+            //     return swal('Invalid user or pass');
+            // }
+            // if(!result.user.)
         })
         
     
-    } 
-      
+    }
+    // 
+    //    email pass validation 
+    // sendPasswordResetEmail(auth, email)
+    // .then(()=>{
+    // swal('please check your email')
+    // })
+    // .catch(error=>{
+    //     console.log(error)
+    // })
     
     
     return (
@@ -92,6 +108,8 @@ name="email"
 ref={emailRef}
  placeholder="Email" className="input input-bordered " required />
 </div>
+
+{/* password  */}
 <div className="form-control">
 <label className="label">
 <span className="label-text">Password</span>
@@ -102,8 +120,9 @@ type="password"
  name="password"
  ref={passwordRef}
   placeholder="password" className="input input-bordered" required />
-
+ {/* <label ><a onClick={handleForgot} className='label-text-alt link link-hover text-sm' href="">Forgot Password?</a></label> */}
 </div>
+
 <div className="form-control mt-6">
 <button className="btn btn-secondary">Login</button>
 </div>
