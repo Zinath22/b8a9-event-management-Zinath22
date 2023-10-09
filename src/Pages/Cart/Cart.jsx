@@ -26,15 +26,19 @@ const Cart = () => {
     }, [])
 
     console.log(carts);
+  const handleRemove =()=>{
+    localStorage.clear()
+    setcartBooked([])
+  }
     return (
-        <div>
-           
+        <div className="text-center justify-center items-center">
+           {cartBooked.length > 0 && <button  onClick={handleRemove} className="btn  bg-red-400">Delete cart</button> }
             <div>
                
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  ">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center text-center items-center  ">
                     {cartBooked.length === 0 ? (
-                        <p className="text-center text-purple-500
-                         text-4xl col-span-3 py-10">Empty cart</p>
+                        <p className="text-center text-red-500
+                         text-4xl col-span-3 py-10">No data Found</p>
                     ) :
                         cartBooked.map(cart =>( <CartCard
                         cart={cart} key={cart.id}></CartCard>))

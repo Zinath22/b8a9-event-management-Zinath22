@@ -64,6 +64,9 @@ const Login = () => {
         .catch(error=>{
             console.error(error);
             setLoginError(error.message);
+            if (error.message === 'Firebase: Error (auth/invalid-login-credentials).44') {
+                return swal('Invalid user or pass');
+            }
         })
         
     
@@ -73,7 +76,7 @@ const Login = () => {
     
     return (
         
- <div className="flex  my-5 rounded-lg justify-center  shadow-lg py-10 mx-auto w-2/3 ">
+ <div className="flex md:flex-row flex-col my-5 rounded-lg justify-center  shadow-lg py-10 mx-auto w-2/3 ">
        <div className="w-2/3 ">
 
 <h2 className="text-3xl  text-center "> Login Now</h2>

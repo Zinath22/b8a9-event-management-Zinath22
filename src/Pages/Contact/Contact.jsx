@@ -2,38 +2,44 @@
 
 
 const Contact = () => {
-    // const navigate = useNavigate()
-
-    // navigate(location?.state ? location.state : '/')
+   
     return (
         <div className="px-10 my-10  ">
-            <div className=" rounded-lg   bg-pink-300">
-  <div className=" text-center">
-   <div className="flex justify-between mx-auto  text-center items-center">
+            
+            <div className=" rounded-lg ">
+            <img className=" h-[400px] w-full rounded-lg" src="https://i.ibb.co/JkQzBnn/melinda-gimpel-5-Ne6m-MQt-Ido-unsplash.jpg" alt="" />
+  
+            <div className="px-5 ">
+<h1 className="text-4xl text-red-500 text-center mt-10">Our Services</h1>
+   
+      <div className="flex justify-start items-center flex-col space-y-4">
+      <p>Stage Decoration</p>
+      <p>Photography</p>
+      <p>Cinematography</p>
+      </div>
+   </div>
+  
+   <div className="flex flex-col md:flex-row justify-evenly mx-auto  text-center items-center">
 
-   <div className=" mx-auto ">
-      <h1 className="text-3xl  mb-5">Contact Us</h1>
-      <h1 className="text-2xl mb-4">phone: <span className="text-purple-700">+0999911</span></h1>
-     
-      <h1 className="text-2xl">Email: <span className="text-purple-700">event@event.com</span></h1>
+   <div className="  ">
+      <h1 className="text-2xltext-red-500 mb-4">phone </h1>
+      <p className="">+0999911</p>
+      <h1 className="text-2xl text-red-500">Email</h1>
+      <p className="">event@event.com</p>
    </div>
     
-   <div className="px-5 mx-auto">
-<h1 className="text-3xl mt-10">Our Services</h1>
-   <ul className=" mt-4 mb-10">
-        <li className="text-2xl">
-            .Stage Decoration
-        </li>
-        <li  className="text-2xl">
-            .Lighting
-        </li>
-        <li  className="text-2xl">
-            .Photography
-        </li>
-        <li  className="text-2xl">
-            .Cinematography
-        </li>
-      </ul>
+   <div className="flex justify-start items-center space-y-4 flex-col">
+
+
+   <input className="border border-red-300" placeholder="Email" type="email" name="" id="" />
+   <textarea
+      className="border border-red-300"
+      cols="30"
+      rows="3"
+    ></textarea>
+   <button className="btn bg-red-500 twhite">Submit</button>
+
+
    </div>
       
       {/* <button className="btn btn-primary"></button> */}
@@ -42,7 +48,7 @@ const Contact = () => {
   </div>
   
 </div>
-        </div>
+        
     );
 };
 

@@ -13,7 +13,7 @@ const Register = () => {
   const [success, setSuccess] = useState('');
   const[showPassword, setShowPassword] = useState(false)
   
-    const {createUser}  = useContext(AuthContext)
+    const {createUser, logOut}  = useContext(AuthContext)
 
     // const handleRegister = e =>{
     //     e.preventDefault();
@@ -185,7 +185,8 @@ const handleRegister = e => {
       .then(result => {
           console.log(result);
           swal('Registration successful');
-          setSuccess('Registration successful'); // Update state
+          setSuccess('Registration successful');
+          logOut().then().catch()
       })
       .catch(error => {
           console.error(error);

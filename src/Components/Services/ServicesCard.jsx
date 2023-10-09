@@ -24,7 +24,7 @@ const ServicesCard = ({service}) => {
   </div>
   <div className="p-6 pt-0">
     <Link to={`/services/${id}`}><button
-      className="block bg-red-400 w-full select-none rounded-lg  py-3 px-6 text-center align-middle font-sans text-sm uppercase text-black transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+      className="block bg-red-400 text-white w-full select-none rounded-lg  py-3 px-6 text-center align-middle font-sans text-sm uppercase  transition-all hover:scale-105 focus:scale-105 focus:opacity-[0.85] active:scale-100 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
       type="button"
     >
      Show Details

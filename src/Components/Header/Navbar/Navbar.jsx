@@ -28,7 +28,7 @@ logOut()
    </>
 
     return (
-        <div className="flex justify-between items-center py-10 mx-10 px-10 ">
+        <div className="flex justify-between items-center py-5 mx-10 px-10 shadow-lg ">
             <Logo></Logo>
         <div className=" ">
             <div className="navbar  ">

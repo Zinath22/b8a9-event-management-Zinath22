@@ -24,9 +24,9 @@ const ServiceDetails = () => {
       if (exists) {
           // Card has been added before
           Swal(
-              'Opps!',
+              
               'Card has been added before!',
-              'error'
+              
           );
       } else {
           // Card has not been added before, add it to local storage
