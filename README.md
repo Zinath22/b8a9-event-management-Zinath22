@@ -7,7 +7,12 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
+<!-- live link -->
 
+ https://weeding-event-management.web.app
+
+ <!-- wesite name  -->
+    Plan My Day
 
 <!-- My projects features -->
 1. It is a event management website in the first page we can see a navbar where have contact page, work page, login, registration.Here work page is a private route where without login anyone can not access.

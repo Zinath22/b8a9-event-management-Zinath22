@@ -31,7 +31,7 @@ const validatePassword = (password) => {
       swal( 'Password must contain at least one special character.');
   }
 
-  return ''; // No validation error
+  return ''; 
 };
 
 const handleRegister = e => {
@@ -94,8 +94,6 @@ const handleRegister = e => {
 <span className="label-text">Password</span>
 
 </label>
-
-
 <input  type="password"
 name="password" 
 placeholder="password" className="input input-bordered   " required />
