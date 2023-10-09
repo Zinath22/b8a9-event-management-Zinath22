@@ -9,6 +9,7 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import PrivateRoute from "./PrivateRoute";
 import Contact from "../Pages/Contact/Contact";
 import Cart from "../Pages/Cart/Cart";
+import OurWork from "../Pages/OurWork/OurWork";
 // import Services from "../Components/Services/Services";
 
 
@@ -27,6 +28,10 @@ const Routes = createBrowserRouter([
                 path: '/services/:id',
                 element: <PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
                 loader: ()=> fetch('/data.json')
+            },
+            {
+                path: 'work',
+                element: <PrivateRoute><OurWork></OurWork></PrivateRoute>
             },
             {
                 path: '/cart',

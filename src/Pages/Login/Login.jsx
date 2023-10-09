@@ -58,7 +58,7 @@ const Login = () => {
                 swal('User Logged in  Successfully.')
             }
             else if(result.user){
-                return('Please verify your email address.')
+                swal('Please verify your email address.')
             }
         
         // swal('User Log in Successfully');

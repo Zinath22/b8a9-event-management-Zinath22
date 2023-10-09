@@ -31,7 +31,7 @@ const Cart = () => {
     setcartBooked([])
   }
     return (
-        <div className="text-center justify-center items-center">
+        <div className="text-center horizontal mx-auto ml-10 mt-10 mb-10 justify-center items-center">
            {cartBooked.length > 0 && <button  onClick={handleRemove} className="btn  bg-red-400">Delete cart</button> }
             <div>
                
