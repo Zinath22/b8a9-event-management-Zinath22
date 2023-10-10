@@ -2,6 +2,7 @@
     {
     "id": 1,
     "name": "Engagement Parties",
+    "cart_title": "Our Events",
     "banner_img": "https://i.ibb.co/X8Ytc63/banner.jpg",
     "logo_img": "https://i.ibb.co/qBMcH2k/logo.webp",
     "card_img": "https://i.ibb.co/rs6Q4GN/daniel-gutko-k-V8c-1-Yv-Tzs-unsplash.jpg",
@@ -13,6 +14,7 @@
     {
     "id": 2,
     "name": "Retirement Parties",
+    "cart_title": "Our Events",
     "banner_img": "https://i.ibb.co/X8Ytc63/banner.jpg",
     "logo_img": "https://i.ibb.co/qBMcH2k/logo.webp",
     "card_img": "https://i.ibb.co/8j6WXRH/vlad-sargu-Itph-H2l-Gzu-I-unsplash.jpg",
@@ -24,6 +26,7 @@
     {
     "id": 3,
     "name": "wedding ",
+    "cart_title": "Our Events",
     "banner_img": "https://i.ibb.co/X8Ytc63/banner.jpg",
     "logo_img": "https://i.ibb.co/qBMcH2k/logo.webp",
     "card_img": "https://i.ibb.co/Xbg68xt/elvis-bekmanis-WJc87-MVc-Da-A-unsplash.jpg",
@@ -35,6 +38,7 @@
     {
     "id": 4,
     "name": "Birthday Parties",
+    "cart_title": "Our Events",
     "banner_img": "https://i.ibb.co/X8Ytc63/banner.jpg",
     "logo_img": "https://i.ibb.co/qBMcH2k/logo.webp",
     "card_img": "https://i.ibb.co/5MtJ4rJ/sujan-khalifa-LO1l-To-LGGFA-unsplash.jpg",
@@ -46,6 +50,7 @@
     {
     "id": 5,
     "name": "Baby Shower",
+    "cart_title": "Our Events",
     "banner_img": "https://i.ibb.co/X8Ytc63/banner.jpg",
     "logo_img": "https://i.ibb.co/qBMcH2k/logo.webp",
     "card_img": "https://i.ibb.co/Z8Ncmzg/tai-s-captures-V-WK3awp5-Mk-unsplash.jpg",
@@ -57,6 +62,7 @@
     {
     "id": 6,
     "name": "Anniversaries Party",
+    "cart_title": "Our Events",
     "banner_img": "https://i.ibb.co/X8Ytc63/banner.jpg",
     "logo_img": "https://i.ibb.co/qBMcH2k/logo.webp",
     "card_img": "https://i.ibb.co/swkVcvZ/alvaro-cvg-m-W8-IZd-X7n8-E-unsplash.jpg",

@@ -1,161 +1,150 @@
-import {  FaGoogle } from 'react-icons/fa';
+
+
 import { useContext, useRef, useState } from "react";
-import { Link, useLocation} from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2"; // Import Swal instead of 'sweetalert'
+import { getAuth, sendPasswordResetEmail } from "firebase/auth";
+import app from "../../Firebase/firebase.config";
 import { AuthContext } from "../../Providers/AuthProvider";
-import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
-import app from '../../Firebase/firebase.config';
-import swal from 'sweetalert';
-// import { getAuth } from 'firebase/auth';
+
+const auth = getAuth(app);
 
 const Login = () => {
-    
-    const [loginError,  setLoginError] = useState('');
-    const [success, setSuccess] = useState('');
-    const emailRef = useRef(null);
-    const passwordRef =  useRef(null);
+  const { signIn, googleLogIn, logOut } = useContext(AuthContext);
+  const [error, setError] = useState("");
+  const location = useLocation();
+  const navigate = useNavigate();
+  const emailRef = useRef(null);
 
-    const [user, setUser] = useState();
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    setError("");
+    signIn(email, password)
+      .then((result) => {
+        console.log(result.user);
+        Swal.fire(
+          'Success!',
+          'Login successful',
+          'success'
+        );
 
-    const auth = getAuth(app)
-    const provider = new GoogleAuthProvider();
+        // Reset the form fields
+        e.target.email.value = "";
+        e.target.password.value = "";
 
-    const handleGoogleSignIn = ()=>{
-       signInWithPopup(auth, provider)
-       .then(result =>{
-        const loginUser = result.loginUser;
-       setUser(loginUser);
-       })
-       .catch(error=>{
-        console.error('error', error.message);
-       })
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        console.error(error);
+        if (error.message === "Firebase: Error (auth/invalid-login-credentials).") {
+            Swal.fire(
+                'Oops!',
+                'Invalid user or password',
+                'error'
+            );
+            console.log(error);
+          return logOut();
+        } else {
+            if (error.message === "Cannot read properties of undefined (reading 'user')") {
+               return Swal.fire(
+                    'Oops!',
+                    'Invalid user or password',
+                    'error'
+                );}
+            console.log(error.message);
+          setError(error.message);
+        }
+      });
+  };
+
+  const handleGoogleLogin = () => {
+    googleLogIn()
+      .then((result) => {
+        console.log(result.user);
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => console.error(error));
+  };
+
+  const handleForgetPass = () => {
+    const email = emailRef.current.value;
+    if (!email) {
+      Swal.fire(
+        'Oops!',
+        'Please enter your email address.',
+        'error'
+      );
+      return;
     }
-    const {signIn }= useContext(AuthContext)
-    // location 
-    const location = useLocation();
-    console.log(location);
-//  navigate 
-    // const navigate = useNavigate()
 
-    const handleLogin = e =>{
-        e.preventDefault();
-        console.log(e.currentTarget);
+    sendPasswordResetEmail(auth, email)
+      .then(() => {
+        Swal.fire(
+          'Email Sent!',
+          'A password reset email has been sent to your email address.',
+          'success'
+        );
+      })
+      .catch((error) => {
+        console.error(error);
+        Swal.fire(
+          'Oops!',
+          'Failed to send password reset email. Please try again later.',
+          'error'
+        );
+      });
+  };
 
+  return (
+    <div>
+      <p className="text-center text-red-600">{error}</p>
       
-        const form = new FormData(e.currentTarget);
-       
-        const email = form.get('email');
-        const password = form.get('password');
-        console.log(email,password);
+          
+            <div className="lg:w-1/2 w-full  my-10 text-white font-bold mx-auto  py-10 px-12 " style={{ backgroundImage: 'linear-gradient(115deg, #FF6666, #FFFFFF)' }}>
+              <h2 className="text-3xl mb-4 text-center">Login</h2>
+              <p className="mb-4 text-center">
+                Welcome back! Login to your account for quick access.
+              </p>
+              <form onSubmit={handleLogin} className="text-black">
+                <div className="mt-5">
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    ref={emailRef}
+                    placeholder="Email"
+                    className="input rounded  w-full"
+                  />
+                </div>
+                <div className="mt-5">
+                  <input
+                    type="password"
+                    name="password"
+                    required
+                    placeholder="Password"
+                    className="input rounded  w-full"
+                  />
+                </div>
+                <div className="mt-5"></div>
+                <div className="mt-5">
+                  <button className="w-full bg-red-500 py-3 text-center rounded text-white">Login Now</button>
+                  <div className="flex text-sm justify-between items-center mt-5">
+                    <p className="tmt-2">New To The Website? <Link to={'/register'}><span className="btn-link font-medium text-red-500">Register</span></Link></p>
+                    <p className="btn-link cursor-pointer" onClick={handleForgetPass}>Forgot password?</p>
+                  </div>
+                </div>
+              </form>
+              <div className="divider">or</div>
+              <div className="space-y-3">
+                <h4 onClick={handleGoogleLogin} className="cursor-pointer w-full bg-red-500 py-3 text-center rounded text-white">Login In With Google</h4>
+              </div>
+            </div>
+         
+        </div>
 
-    // reset 
-    setLoginError('');
-    setSuccess('');
-        
-        signIn(email,password)
-       .then(result =>{
-            console.log(result.user)
-            if(!result.user.emailVerified){
-                swal('User Logged in  Successfully.')
-            }
-            else if(result.user){
-                swal('Please verify your email address.')
-            }
-        
-        // swal('User Log in Successfully');
-        })
-       
-
-        // navigate 
-        // navigate(location?.state ? location.state : '/')
-
-        .catch(error=>{
-            console.error(error);
-            setLoginError(error.message);
-            // if (error.message === 'Firebase: Error (auth/invalid-login-credentials).44') {
-            //     return swal('Invalid user or pass');
-            // }
-            // if(!result.user.)
-        })
-        
-    
-    }
-    // 
-    //    email pass validation 
-    // sendPasswordResetEmail(auth, email)
-    // .then(()=>{
-    // swal('please check your email')
-    // })
-    // .catch(error=>{
-    //     console.log(error)
-    // })
-    
-    
-    return (
-        
- <div className="flex md:flex-row flex-col my-5 rounded-lg justify-center  shadow-lg py-10 mx-auto w-2/3 ">
-       <div className="w-2/3 ">
-
-<h2 className="text-3xl  text-center " data-aos="flip-left"> Login Now</h2>
-
-<form onSubmit={handleLogin}  className="lg:w-1/2 md:w-3/4 mx-auto " >
-<div className="form-control">
-<label className="label">
-<span className="label-text">Email</span>
-</label>
-<input type="email" 
-
-name="email"
-ref={emailRef}
- placeholder="Email" className="input input-bordered " required />
-</div>
-
-{/* password  */}
-<div className="form-control">
-<label className="label">
-<span className="label-text">Password</span>
-</label>
-<input 
-type="password"
-
- name="password"
- ref={passwordRef}
-  placeholder="password" className="input input-bordered" required />
- {/* <label ><a onClick={handleForgot} className='label-text-alt link link-hover text-sm' href="">Forgot Password?</a></label> */}
-</div>
-
-<div className="form-control mt-6">
-<button className="btn btn-secondary">Login</button>
-</div>
-{user && <div>
-    <h3>user?:{user.email}</h3>
-</div>
- }
-
-</form>
-
-{
-                    loginError && <p className="text-red-700 text-center">{loginError}</p>
-                }
-
-{
-  success && <p className="text-green-400 text-3xl text-center">{success}</p>
-}
-
-<p className="text-center mt-4" data-aos="flip-left">New to this website Please <Link className="text-blue-700 font-bold" to="/register">Register</Link> </p>
-</div>
-<div className="py-7 w-3/2 mr-5 ">
-    <h1 className='mb-5 text-center text-sky-500 font-semibold text-3xl' data-aos="flip-left">...OR... <br />Login With</h1>
-    <button onClick={handleGoogleSignIn} className='btn btn-outline w-full '>
-    <FaGoogle></FaGoogle>Login With Google
-    </button>
-   
-</div>
- </div>
-
-
- 
-        
-    );
+  );
 };
 
 export default Login;

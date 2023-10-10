@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "position": "Event Coordinator",
+      "img": "https://i.ibb.co/Gv9Kxhq/tyler-nix-PQeo-Qdk-U9j-Q-unsplash.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Shara Smith",
+      "position": "Marketing Manager",
+      "img": "https://i.ibb.co/FsCPb4H/toa-heftiba-O3ymv-T7-Wf9-U-unsplash.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Charlie Brown",
+      "position": "Logistics Coordinator",
+      "img": "https://i.ibb.co/3c5Lfgb/jack-finnigan-rri-AI0nhcbc-unsplash.jpg"
+    }
+  ]
+  

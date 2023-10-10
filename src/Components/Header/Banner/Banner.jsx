@@ -14,7 +14,7 @@ const Banner = () => {
              <div style={bgImg}  className="h-[450px] relative flex flex-col justify-center items-center" >
               <h2 className="text-6xl text-red-400 
               text-center"  data-aos="flip-left" 
-              >Plan Your Day With Us <br />  & <br /> make your day more coloful</h2>
+              >Plan Your Day With Us <br />  & <br /> make your day more colorful</h2>
         <div className="absolute inset-0 bg-opacity-70  z-10">
          
         </div>
